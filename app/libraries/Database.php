@@ -59,7 +59,7 @@ class Database
                     $type = PDO::PARAM_STR;
             }
         }
-        $this->stmt->bind($param, $value, $type);
+        $this->stmt->bindValue($param, $value, $type);
     }
    //Exexute prepared statment
     public function execute()
@@ -75,6 +75,8 @@ class Database
     // Get single record as an object
     public function single()
     {
+
+
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
     }
