@@ -21,6 +21,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo URLROOT; ?>/users/logout">Logout</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#"><strong>
+                            <?php echo $_SESSION['user_name']; ?> profile</strong></a>
+                </li>
             <?php else : ?>
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo URLROOT; ?>/users/login">Login</a>
